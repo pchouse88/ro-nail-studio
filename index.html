@@ -2,42 +2,50 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ro.nail_studio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <header class="fade-in">
     <img src="images/logo.jpg" alt="Logo" class="logo" />
-    <h1>Ro.nail_studio</h1>
+    <h1>♡ Ro.nail_studio ♡</h1>
     <p class="subtitle">♡ 台中南區美甲 ♡ 新手美甲師</p>
   </header>
 
-  <section class="about">
+  <section class="about fade-in">
     <h2>關於我</h2>
     <p>INFJ 新手美甲師｜無足部與延甲服務｜居家工作室有狗狗陪伴</p>
   </section>
 
-  <section class="gallery">
+  <section class="gallery fade-in">
     <h2>作品展示</h2>
     <div class="images">
-      <img src="images/nail1.jpg" alt="作品1" />
-      <img src="images/nail2.jpg" alt="作品2" />
-      <img src="images/nail3.jpg" alt="作品3" />
+      <img src="images/nail1.jpg" alt="作品1" class="zoomable" />
+      <img src="images/nail2.jpg" alt="作品2" class="zoomable" />
+      <img src="images/nail3.jpg" alt="作品3" class="zoomable" />
     </div>
   </section>
 
-  <section class="links">
+  <section class="links fade-in">
     <h2>預約與社群</h2>
     <a href="https://line.me/R/ti/p/@320npnak" target="_blank">📲 預約諮詢（LINE）</a>
     <a href="https://www.instagram.com/ro.nail_studio/" target="_blank">💖 Instagram</a>
     <a href="https://www.facebook.com/ro.nailnail?locale=zh_TW" target="_blank">📘 Facebook</a>
-    <a href="#" target="_blank">📕 小紅書</a>
+    <a href="https://reurl.cc/dQQ2b8" target="_blank">📕 小紅書</a>
   </section>
-  
 
-  <footer>
-    <p>© 2025 Ro.nail_studio｜made with love ♡</p>
+  <footer class="fade-in">
+    <p id="footer-text">© 2025 Ro.nail_studio｜made with love ♡</p>
   </footer>
+
+  <!-- Lightbox 大圖展示 -->
+  <div id="lightbox" class="hidden">
+    <span id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="放大圖">
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
