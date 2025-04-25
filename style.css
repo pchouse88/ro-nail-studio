@@ -1,65 +1,146 @@
 body {
-    margin: 0;
-    font-family: "微軟正黑體", sans-serif;
-    background-color: #f5f0e9;
-    color: #444;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .logo {
-    width: 100px;
-    margin: 10px auto;
-  }
-  
-  header h1 {
-    font-size: 2rem;
-    margin: 0.5em 0 0;
-  }
-  
-  .subtitle {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 20px;
-  }
-  
-  section {
-    margin: 40px 0;
-  }
-  
-  .gallery .images {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  
-  .gallery img {
-    width: 180px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  .links a {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
-    background-color: #d5c7b8;
-    color: white;
-    border-radius: 20px;
-    text-decoration: none;
-    width: 60%;
-    max-width: 300px;
-    transition: background-color 0.3s;
-  }
-  
-  .links a:hover {
-    background-color: #c4b3a3;
-  }
-  
-  footer {
-    font-size: 0.9rem;
-    color: #aaa;
-    margin-top: 50px;
-  }
-  
+  margin: 0;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC', sans-serif;
+  background-color: #f5f0e9;
+  color: #444;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Logo 圓形 */
+.logo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #d5c7b8;
+}
+
+/* 主標題 */
+header h1 {
+  font-size: 2.4rem;
+  color: #c9a3a3;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #f5e8e2;
+  margin: 0.5em 0 0.3em;
+}
+
+header h1::before,
+header h1::after {
+  content: "♡";
+  margin: 0 8px;
+  color: #c9a3a3;
+}
+
+/* 副標題 */
+.subtitle {
+  font-size: 1.1rem;
+  color: #a67c84;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+/* 各段落區塊 */
+section {
+  margin: 40px 0;
+}
+
+/* 作品圖片排列 */
+.gallery .images {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* 預約與社群按鈕 */
+.links a {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #d5c7b8;
+  color: #5c4242;
+  font-weight: 600;
+  border-radius: 20px;
+  text-decoration: none;
+  width: 60%;
+  max-width: 300px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.links a:hover {
+  background-color: #c4b3a3;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* 頁尾 */
+footer {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 50px;
+}
+
+/* 出場淡入動畫 */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Lightbox */
+#lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+#lightbox.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+#lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
