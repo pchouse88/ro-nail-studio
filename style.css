@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: "微軟正黑體", sans-serif;
+    background-color: #f5f0e9;
+    color: #444;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .logo {
+    width: 100px;
+    margin: 10px auto;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin: 0.5em 0 0;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  section {
+    margin: 40px 0;
+  }
+  
+  .gallery .images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .gallery img {
+    width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .links a {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #d5c7b8;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    width: 60%;
+    max-width: 300px;
+    transition: background-color 0.3s;
+  }
+  
+  .links a:hover {
+    background-color: #c4b3a3;
+  }
+  
+  footer {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 50px;
+  }
+  
